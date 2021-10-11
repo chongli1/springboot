@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生的列表页</title>
+    <!--<link rel="stylesheet" href="/element-ui-2.13.2.css">-->
+    <script src="/vue.js"></script>
+    <!--<script src="/element-ui-2.13.2.js"></script>-->
+    <script src="/axios.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--<a href="/page/studentList">学生列表页</a>-->
+        <template>
+            <div>
+                <el-input v-model="student.studentName" placeholder="请输入内容" style="width: 15%"></el-input>
+                <el-select v-model="student.studentSex" placeholder="请选择">
+                    <el-option
+                            v-for="item in options"
+                            :key="item.value"
+                            :label="item.label"
+                            :value="item.value">
+                    </el-option>
+                </el-select>
+                {{student.studentSex}}
+                <!--<el-button type="success" @click="searchBtn">搜索</el-button>-->
+                <el-button type="primary" icon="el-icon-search" @click="searchBtn">搜索</el-button>
+            </div>
+
+            <div>
+                <el-table
+                        :data="tableData"
+                        stripe
+                        style="width: 100%">
+                    <el-table-column
+                            prop="studentId"
+                            label="学号"
+                            width="180">
+                    </el-table-column>
+                    <el-table-column
+                            prop="studentName"
+                            label="学生姓名"
+                            width="180">
+                    </el-table-column>
+                    <el-table-column
+                            prop="studentSex":formatter="studentSexFormate"
+                            label="学生性别"
+                            width="180">
+                    </el-table-column>
+                    <el-table-column
+                            prop="studentPhone"
+                            label="学生手机号"
+                            width="180">
+                    </el-table-column>
+                    <el-table-column
+                            prop="studentCardId"
+                            label="身份证号"
+                            width="180">
+                    </el-table-column>
+                    <el-table-column
+                            prop="studentComeDate":formatter="date"
+                            label="学生入学时间"
+                            width="180">
+                    </el-table-column>
+                    <el-table-column
+                            prop="studentAddress"
+                            label="学生地址"
+                            width="180">
+                    </el-table-column>
+                </el-table>
+            </div>
+            <div>
+                <!--分页-->
+                <div class="block">
+                    <!--<span class="demonstration">完整功能</span>-->
+                    <el-pagination
+                            @size-change="handleSizeChange"
+                            @current-change="handleCurrentChange"
+                            :current-page="currentPage"
+                            :page-sizes="[5, 10, 15, 20]"
+                            :page-size="5"
+                            layout="total, sizes, prev, pager, next, jumper"
+                            :total="total">
+                        <!--page-size：每页显示多少条数据    total：总共多少条数据-->
+                    </el-pagination>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",  //挂载点
+            data:{
+                        tableData: [],
+                        currentPage: 1,
+                        page:1,
+                        limit:5,
+                        total:0,
+
+                        options: [{
+                            value: '1',
+                            label: '男生'
+                        }, {
+                            value: '0',
+                            label: '女生'
+                        }],
+
+                        student:{
+                               studentName:"",
+                               studentSex:"",
+                               studentComeDate:""
+                        }
+            },
+            methods:{
+                searchBtn:function(){
+                    console.log("发送 axios")
+                    this.loadTable(this.page,this.limit);
+                },
+                studentSexFormate:function(row, index) {
+                    if (row.studentSex == 1) {
+                        return "男";
+                    } else {
+                        return "女";
+                    }
+
+                },
+
+                handleSizeChange(val) {
+                    console.log(`每页 ${val} 条`);
+                    this.loadTable(this.page,val);
+                },
+                handleCurrentChange(val) {
+                    console.log(`当前页: ${val}`);
+                    this.loadTable(val,this.limit);
+                },
+                loadTable:function(page,limit){
+                    axios.get("/student/selectPageAll",{
+                                params:{
+                                    page:page,
+                                    limit:limit,
+                                    studentSex:this.student.studentSex,
+                                    studentName:this.student.studentName
+                                }
+                            }).then(res=>{
+                                console.log(res)
+                                //把json数组赋值到 tableData
+                                this.tableData=res.data.data.list;
+                                this.total=res.data.data.total;
+                            });
+
+                }
+            },
+            created(){
+                this.loadTable(this.page,this.limit);
+            }
+            // created:function () {
+            //     //页面一加载 就要访问url  /student/selectAll
+            //     axios.get("/student/selectPageAll",{
+            //         params:{
+            //             page:page,
+            //             limit:limit
+            //         }
+            //     }).then(res=>{
+            //         console.log(res)
+            //         //把json数组赋值到 tableData
+            //         this.tableData=res.data.data
+            //     });
+            // }
+        });
+    </script>
+</body>
+</html>
+
+

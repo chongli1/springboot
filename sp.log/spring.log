@@ -1,0 +1,62 @@
+2021-10-11 16:12:06.395  INFO 14644 --- [restartedMain] com.xiexin.SmartfoodApplication          : Starting SmartfoodApplication using Java 1.8.0_91 on LAPTOP-8O8DBUDU with PID 14644 (D:\实训\项目\oneboot\target\classes started by huawei in D:\实训\项目\oneboot)
+2021-10-11 16:12:06.408  INFO 14644 --- [restartedMain] com.xiexin.SmartfoodApplication          : No active profile set, falling back to default profiles: default
+2021-10-11 16:12:06.539  INFO 14644 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-11 16:12:07.943  INFO 14644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-11 16:12:07.948  INFO 14644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-11 16:12:08.008  INFO 14644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2021-10-11 16:12:09.191  INFO 14644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2021-10-11 16:12:09.216  INFO 14644 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-11 16:12:09.216  INFO 14644 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-11 16:12:09.471  INFO 14644 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-10-11 16:12:09.471  INFO 14644 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2929 ms
+2021-10-11 16:12:09.552 DEBUG 14644 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2021-10-11 16:12:09.552 DEBUG 14644 --- [restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2021-10-11 16:12:09.734  INFO 14644 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-10-11 16:12:10.068  INFO 14644 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-10-11 16:12:11.350 DEBUG 14644 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-10-11 16:12:11.502 DEBUG 14644 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2021-10-11 16:12:11.519  INFO 14644 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-10-11 16:12:11.593 DEBUG 14644 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-10-11 16:12:11.614 DEBUG 14644 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-10-11 16:12:12.615  INFO 14644 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-11 16:12:12.721  INFO 14644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2021-10-11 16:12:12.786  INFO 14644 --- [restartedMain] com.xiexin.SmartfoodApplication          : Started SmartfoodApplication in 7.158 seconds (JVM running for 10.776)
+2021-10-11 16:12:51.331  INFO 14644 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-11 16:12:51.331  INFO 14644 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-11 16:12:51.332 DEBUG 14644 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2021-10-11 16:12:51.332 DEBUG 14644 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2021-10-11 16:12:51.332 DEBUG 14644 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2021-10-11 16:12:51.334 DEBUG 14644 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@782ddde2
+2021-10-11 16:12:51.335 DEBUG 14644 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@282c07ab
+2021-10-11 16:12:51.336 DEBUG 14644 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-10-11 16:12:51.336  INFO 14644 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-10-11 16:12:51.356 DEBUG 14644 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/page/studentList", parameters={}
+2021-10-11 16:12:51.364 DEBUG 14644 --- [http-nio-9090-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.xiexin.controller.PageController#studentList()
+2021-10-11 16:12:51.423 DEBUG 14644 --- [http-nio-9090-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8]
+2021-10-11 16:12:51.753 DEBUG 14644 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-10-11 16:12:51.835 DEBUG 14644 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/vue.js", parameters={}
+2021-10-11 16:12:51.839 DEBUG 14644 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/axios.min.js", parameters={}
+2021-10-11 16:12:51.849 DEBUG 14644 --- [http-nio-9090-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-10-11 16:12:51.849 DEBUG 14644 --- [http-nio-9090-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-10-11 16:12:51.901 DEBUG 14644 --- [http-nio-9090-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-10-11 16:12:51.908 DEBUG 14644 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2021-10-11 16:12:52.512 DEBUG 14644 --- [http-nio-9090-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/student/selectPageAll?page=1&limit=5&studentSex=&studentName=", parameters={masked}
+2021-10-11 16:12:52.514 DEBUG 14644 --- [http-nio-9090-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.xiexin.controller.StudentController#selectPageAll(Student, String, Integer, Integer)
+2021-10-11 16:12:52.688 DEBUG 14644 --- [http-nio-9090-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2021-10-11 16:12:52.689 DEBUG 14644 --- [http-nio-9090-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+2021-10-11 16:12:52.696 DEBUG 14644 --- [http-nio-9090-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2021-10-11 16:12:52.696 DEBUG 14644 --- [http-nio-9090-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2021-10-11 16:12:52.704 DEBUG 14644 --- [http-nio-9090-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2021-10-11 16:12:52.706 DEBUG 14644 --- [http-nio-9090-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2021-10-11 16:12:52.740 DEBUG 14644 --- [http-nio-9090-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [image/webp, image/apng, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-10-11 16:12:52.741 DEBUG 14644 --- [http-nio-9090-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Oct 11 16:12:52 CST 2021, status=404, error=Not Found, message=No message available,  (truncated)...]
+2021-10-11 16:12:52.831 DEBUG 14644 --- [http-nio-9090-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2021-10-11 16:12:53.012 DEBUG 14644 --- [http-nio-9090-exec-4] c.x.d.StudentDAO.selectByExample_COUNT   : ==>  Preparing: SELECT count(0) FROM student
+2021-10-11 16:12:53.065 DEBUG 14644 --- [http-nio-9090-exec-4] c.x.d.StudentDAO.selectByExample_COUNT   : ==> Parameters: 
+2021-10-11 16:12:53.178 DEBUG 14644 --- [http-nio-9090-exec-4] c.x.d.StudentDAO.selectByExample_COUNT   : <==      Total: 1
+2021-10-11 16:12:53.187 DEBUG 14644 --- [http-nio-9090-exec-4] c.xiexin.dao.StudentDAO.selectByExample  : ==>  Preparing: select student_id, student_name, student_sex, student_card_id, student_phone, student_address, student_come_date from student LIMIT ?
+2021-10-11 16:12:53.188 DEBUG 14644 --- [http-nio-9090-exec-4] c.xiexin.dao.StudentDAO.selectByExample  : ==> Parameters: 5(Integer)
+2021-10-11 16:12:53.197 DEBUG 14644 --- [http-nio-9090-exec-4] c.xiexin.dao.StudentDAO.selectByExample  : <==      Total: 5
+2021-10-11 16:12:53.235 DEBUG 14644 --- [http-nio-9090-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-10-11 16:12:53.236 DEBUG 14644 --- [http-nio-9090-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [Result(code=20000, msg=操作成功, data=PageInfo{pageNum=1, pageSize=5, size=5, startRow=1, endRow=5, tota (truncated)...]
+2021-10-11 16:12:53.279 DEBUG 14644 --- [http-nio-9090-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
